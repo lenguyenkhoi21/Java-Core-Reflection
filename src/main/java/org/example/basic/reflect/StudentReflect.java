@@ -1,4 +1,4 @@
-package org.example.chapter1.reflect;
+package org.example.basic.reflect;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

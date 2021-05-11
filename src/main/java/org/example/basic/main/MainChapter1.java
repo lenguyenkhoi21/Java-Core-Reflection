@@ -1,7 +1,7 @@
-package org.example.chapter1.main;
+package org.example.basic.main;
 
-import org.example.chapter1.pojo.Student;
-import org.example.chapter1.reflect.StudentReflect;
+import org.example.basic.pojo.Student;
+import org.example.basic.reflect.StudentReflect;
 import org.example.color.Color;
 
 import java.util.Arrays;
