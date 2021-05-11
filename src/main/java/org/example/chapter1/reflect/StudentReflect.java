@@ -9,13 +9,7 @@ public class StudentReflect {
         try {
             Method method = clazz.getMethod( "setName", new Class[] {String.class});
             method.invoke(object, new Object[] { name });
-        } catch (NoSuchMethodException exception) {
-            exception.printStackTrace();
-        } catch (IllegalAccessException exception) {
-            exception.printStackTrace();
-        } catch (IllegalArgumentException exception) {
-            exception.printStackTrace();
-        } catch (InvocationTargetException exception) {
+        } catch (NoSuchMethodException | IllegalAccessException | IllegalArgumentException | InvocationTargetException exception) {
             exception.printStackTrace();
         }
     }
@@ -30,6 +24,10 @@ public class StudentReflect {
 
     public static Method getDeclareMethodStudent(Object object, String name, Class[] classes) throws NoSuchMethodException {
         return object.getClass().getDeclaredMethod(name, classes);
+    }
+
+    public static Class[] getParametersTypes(Object object, String name, Class[] classes) throws NoSuchMethodException {
+        return object.getClass().getMethod(name, classes).getParameterTypes();
     }
 
 
